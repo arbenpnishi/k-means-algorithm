@@ -1,6 +1,5 @@
 # **k-means-algorithm**
-Comprehensive Cluster Analysis in order to reveal the structures and similar data groups.
-
+Goal: Classify data into clusters
 
 ## **Problem Description**
 
