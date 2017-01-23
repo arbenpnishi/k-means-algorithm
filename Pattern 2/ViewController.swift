@@ -46,17 +46,17 @@ class ViewController: UIViewController {
     func getTitleFromCalculation(type: CalculationType) -> String{
         var str: String = ""
         switch type {
-        case .eucledian:
-            str = "EUCLEDIAN"
+        case .euclidean:
+            str = "EUCLIDEAN"
             
         case .manhattan:
             str = "MANHATTAN"
 
-        case .eucledianSquared:
-            str = "EUCLEDIAN SQUARED"
+        case .euclideanSquared:
+            str = "EUCLIDEAN SQUARED"
 
-        case .chebyshev:
-            str = "CHEBYSHEV"
+        case .chebychev:
+            str = "CHEBYCHEV"
         }
         return "\n" + str + "\n\n"
     }

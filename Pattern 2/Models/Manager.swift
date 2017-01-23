@@ -7,15 +7,14 @@
 //
 
 import UIKit
-import Foundation
 
 let K_MEANS_MAXIMUM_COUNT = 100
 
 enum CalculationType: Int {
-    case eucledian = 1
+    case euclidean = 1
     case manhattan
-    case eucledianSquared
-    case chebyshev
+    case euclideanSquared
+    case chebychev
 }
 
 class Manager: NSObject {
@@ -24,7 +23,7 @@ class Manager: NSObject {
     
     var categories: [Int] = [Int]()
     
-    var calculationType : CalculationType = .eucledian
+    var calculationType : CalculationType = .euclidean
     
     override init(){
         super.init()
@@ -55,7 +54,7 @@ class Manager: NSObject {
     
     func useKMeansAlgorithm(){
         resetValues()
-//        normalizeValues()
+        normalizeValues()
         
         for _ in 0 ..< K_MEANS_MAXIMUM_COUNT{
             for test in tests.instances {
@@ -63,17 +62,17 @@ class Manager: NSObject {
                 for centroid in centroids.instances {
                     var distance : Float = 0
                     switch calculationType {
-                    case .eucledian:
-                        distance = calculateEucledianDistance(instance: test.features, centroid: centroid.features)
+                    case .euclidean:
+                        distance = calculateEuclideanDistance(instance: test.features, centroid: centroid.features)
                         
                     case .manhattan:
                         distance = calculateManhattanDistance(instance: test.features, centroid: centroid.features)
                         
-                    case .eucledianSquared:
+                    case .euclideanSquared:
                         distance = calculateEuclideanSquaredDistance(instance: test.features, centroid: centroid.features)
                         
-                    case .chebyshev:
-                        distance = calculateChebyshevDistance(instance: test.features, centroid: centroid.features)
+                    case .chebychev:
+                        distance = calculateChebychevDistance(instance: test.features, centroid: centroid.features)
                         
                     }
                     test.distances.append(distance)
@@ -109,7 +108,7 @@ class Manager: NSObject {
         }
     }
     
-    private func calculateEucledianDistance(instance: [Float], centroid: [Float]) -> Float{
+    private func calculateEuclideanDistance(instance: [Float], centroid: [Float]) -> Float{
         var distance: Float = 0.0
         
         for i in 0 ..< centroid.count{
@@ -136,7 +135,7 @@ class Manager: NSObject {
         return distance
     }
     
-    private func calculateChebyshevDistance(instance: [Float], centroid: [Float])-> Float{
+    private func calculateChebychevDistance(instance: [Float], centroid: [Float])-> Float{
         var distance: Float = 0.0
         var result = [Float]()
         
@@ -147,6 +146,7 @@ class Manager: NSObject {
         return result.max()!
     }
 }
+
 public extension String {
     func contentsOrBlank()->String {
         if let path = Bundle.main.path(forResource:self , ofType: nil) {
