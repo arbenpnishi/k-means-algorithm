@@ -7,14 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B4313C81E351A4C00AF6CA0 /* Cluster.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4313C61E351A4C00AF6CA0 /* Cluster.swift */; };
+		3B4313C91E351A4C00AF6CA0 /* Sample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4313C71E351A4C00AF6CA0 /* Sample.swift */; };
+		3B4313CB1E351AEF00AF6CA0 /* Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4313CA1E351AEF00AF6CA0 /* Manager.swift */; };
+		3B8ED0C41E35647E00A22B42 /* ViewWithAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B8ED0C31E35647E00A22B42 /* ViewWithAttributes.swift */; };
 		3BF4508C1E35044800E94FCE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BF4508B1E35044800E94FCE /* AppDelegate.swift */; };
 		3BF4508E1E35044800E94FCE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BF4508D1E35044800E94FCE /* ViewController.swift */; };
 		3BF450911E35044800E94FCE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BF4508F1E35044800E94FCE /* Main.storyboard */; };
 		3BF450931E35044800E94FCE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3BF450921E35044800E94FCE /* Assets.xcassets */; };
 		3BF450961E35044800E94FCE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BF450941E35044800E94FCE /* LaunchScreen.storyboard */; };
+		3BF450A01E35048000E94FCE /* centroids.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3BF4509E1E35048000E94FCE /* centroids.txt */; };
+		3BF450A11E35048000E94FCE /* test.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3BF4509F1E35048000E94FCE /* test.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3B4313C61E351A4C00AF6CA0 /* Cluster.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cluster.swift; sourceTree = "<group>"; };
+		3B4313C71E351A4C00AF6CA0 /* Sample.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sample.swift; sourceTree = "<group>"; };
+		3B4313CA1E351AEF00AF6CA0 /* Manager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Manager.swift; sourceTree = "<group>"; };
+		3B8ED0C31E35647E00A22B42 /* ViewWithAttributes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewWithAttributes.swift; sourceTree = "<group>"; };
 		3BF450881E35044800E94FCE /* Pattern 2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pattern 2.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BF4508B1E35044800E94FCE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3BF4508D1E35044800E94FCE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +32,8 @@
 		3BF450921E35044800E94FCE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3BF450951E35044800E94FCE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3BF450971E35044800E94FCE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3BF4509E1E35048000E94FCE /* centroids.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = centroids.txt; sourceTree = "<group>"; };
+		3BF4509F1E35048000E94FCE /* test.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = test.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +47,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3B4313C51E351A4C00AF6CA0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				3B4313C61E351A4C00AF6CA0 /* Cluster.swift */,
+				3B4313C71E351A4C00AF6CA0 /* Sample.swift */,
+				3B4313CA1E351AEF00AF6CA0 /* Manager.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		3BF4507F1E35044800E94FCE = {
 			isa = PBXGroup;
 			children = (
@@ -56,12 +78,25 @@
 			children = (
 				3BF4508B1E35044800E94FCE /* AppDelegate.swift */,
 				3BF4508D1E35044800E94FCE /* ViewController.swift */,
+				3B4313C51E351A4C00AF6CA0 /* Models */,
 				3BF4508F1E35044800E94FCE /* Main.storyboard */,
+				3B8ED0C31E35647E00A22B42 /* ViewWithAttributes.swift */,
+				3BF4509D1E35048000E94FCE /* Clusters */,
 				3BF450921E35044800E94FCE /* Assets.xcassets */,
 				3BF450941E35044800E94FCE /* LaunchScreen.storyboard */,
 				3BF450971E35044800E94FCE /* Info.plist */,
 			);
 			path = "Pattern 2";
+			sourceTree = "<group>";
+		};
+		3BF4509D1E35048000E94FCE /* Clusters */ = {
+			isa = PBXGroup;
+			children = (
+				3BF4509E1E35048000E94FCE /* centroids.txt */,
+				3BF4509F1E35048000E94FCE /* test.txt */,
+			);
+			name = Clusters;
+			path = mostrat;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,7 +161,9 @@
 			files = (
 				3BF450961E35044800E94FCE /* LaunchScreen.storyboard in Resources */,
 				3BF450931E35044800E94FCE /* Assets.xcassets in Resources */,
+				3BF450A01E35048000E94FCE /* centroids.txt in Resources */,
 				3BF450911E35044800E94FCE /* Main.storyboard in Resources */,
+				3BF450A11E35048000E94FCE /* test.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,7 +175,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				3BF4508E1E35044800E94FCE /* ViewController.swift in Sources */,
+				3B4313C91E351A4C00AF6CA0 /* Sample.swift in Sources */,
 				3BF4508C1E35044800E94FCE /* AppDelegate.swift in Sources */,
+				3B8ED0C41E35647E00A22B42 /* ViewWithAttributes.swift in Sources */,
+				3B4313C81E351A4C00AF6CA0 /* Cluster.swift in Sources */,
+				3B4313CB1E351AEF00AF6CA0 /* Manager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,6 +343,7 @@
 				3BF4509C1E35044800E94FCE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
