@@ -55,7 +55,7 @@ class Manager: NSObject {
     
     func useKMeansAlgorithm(){
         resetValues()
-        normalizeValues()
+//        normalizeValues()
         
         for _ in 0 ..< K_MEANS_MAXIMUM_COUNT{
             for test in tests.instances {
@@ -138,13 +138,14 @@ class Manager: NSObject {
     
     private func calculateChebyshevDistance(instance: [Float], centroid: [Float])-> Float{
         var distance: Float = 0.0
+        var result = [Float]()
         
-        //    for i in 0 ..< centroid.count{
-        //        distance += abs(instance[i] - centroid[i])
-        //    }
-        return distance
+        for i in 0 ..< centroid.count{
+            distance = abs(instance[i] - centroid[i])
+            result.append(distance)
+        }
+        return result.max()!
     }
-    
 }
 public extension String {
     func contentsOrBlank()->String {

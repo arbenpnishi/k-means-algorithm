@@ -1,9 +1,8 @@
 //
 //  ViewWithAttributes.swift
-//  AutoShkolla
 //
 //  Created by Arben Pnishi on 10/7/16.
-//  Copyright © 2016 Tenton. All rights reserved.
+//  Copyright © 2016 Arben Pnishi. All rights reserved.
 //
 
 import UIKit
